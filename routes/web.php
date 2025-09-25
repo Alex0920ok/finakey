@@ -4,6 +4,10 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DocumentController;
+use App\Livewire\AboutUs;
+use App\Livewire\OurExpertise;
+use App\Livewire\OurPhilosophy;
+use App\Livewire\OurService;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 
@@ -147,3 +151,8 @@ require __DIR__.'/auth.php';
 // Route::get('/kyc-form-individual-pdf/{customerUuid}', function ($customerUuid) {
 //     return view('pdf.k-y-c-form-individual', ['customerUuid' => $customerUuid, 'isPDF' => true, 'firstName' => 'John', 'lastName' => 'Doe']);
 // })->middleware('auth')->name('kyc-form-individual-pdf');
+
+Route::get('our-expertise', OurExpertise::class)->name('our-expertise');
+Route::get('our-service', OurService::class)->name('our-service');
+Route::get('about-us', AboutUs::class)->name('about-us');
+Route::get('our-philosophy', OurPhilosophy::class)->name('our-philosophy');
